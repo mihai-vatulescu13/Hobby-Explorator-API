@@ -39,11 +39,6 @@ app.use(express.static('public'));
 
 
 
-//test root endpoint
-app.get('/',(req,res)=>{
- res.json('home route')
-});
-
 
 //get users enpoint(return all users from database):
 app.get('/getUsers',(req,res) =>{
