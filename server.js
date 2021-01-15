@@ -24,7 +24,7 @@ const handleRegister = require('./controllers/Register.js')
 const db = knex({
  client: 'pg',
  connection:{
-  host: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL
    
  }
 })
