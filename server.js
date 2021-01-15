@@ -95,12 +95,13 @@ app.post('/upload',(req,res) =>{
   }
   //file assigned to a variabile:
   const file = req.files.file; 
- 
+  
+  console.log('upload endpoint inside:')
   //mv() method places the file inside public directory
   file.mv(`${__dirname}/public/${file.name}`,error =>{
    if(error){
     //print the error in case that exist: 
-    console.error(error);
+    console.error('error given:\n',error);
     //return an response from the server:
     return res.status(500).json({msg:'there are an server error'}) 
    }
