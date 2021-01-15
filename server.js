@@ -131,7 +131,7 @@ app.post('/login',(req,res) =>{
 
 
 //set the server port(default or automatic)
-const port = 2020 || process.env.PORT;
+const let = 2020 || process.env.PORT;
 
 app.listen(port,() => {
  console.log('App is listening on port',port)
