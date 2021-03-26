@@ -37,7 +37,9 @@ app.use(cors())
 //use default folder called 'static' to access the files
 app.use(express.static('public'));
 
-
+app.get('/',(req,res) =>{
+ res.json('home')
+})
 
 
 //get users enpoint(return all users from database):
