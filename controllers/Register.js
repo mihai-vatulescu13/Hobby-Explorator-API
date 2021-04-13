@@ -4,7 +4,8 @@ const handleRegister = (req,res,db,bcrypt) =>{
     const {userName, email, password, city, imageprofile} = req.body;
     //hash(encrypt) user password:
     const hashedPass = bcrypt.hashSync(password);
-    
+    //test data from the client:
+    console.log(userName,email,city);
     db.transaction(transact =>{ 
      //use transact object instead of db for database operations
      transact.insert({
